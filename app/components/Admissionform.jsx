@@ -55,7 +55,7 @@ const validationSchema = Yup.object({
     "is-valid-phone",
     "Phone number is not valid",
     (value) => {
-      if (!value) return false; // Return false if the value is empty
+      if (!value) return false;
       const phoneNumber = parsePhoneNumberFromString(value);
       return phoneNumber && phoneNumber.isValid();
     }
